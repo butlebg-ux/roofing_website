@@ -55,10 +55,18 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="relative bg-slate-950 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
-    <div class="absolute inset-0 z-0">
-      <img src="https://images.unsplash.com/photo-1584467735818-f2b3fcf54f34?auto=compress&cs=tinysrgb&w=1600" alt="Roofing texture background" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-slate-950/85"></div>
+  <header class="relative bg-slate-950 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-slate-800">
+    <!-- Procedural SVG Background Texture -->
+    <div class="absolute inset-0 z-0 opacity-40">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="heroNoise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="matrix" values="0.2 0 0 0 0.05  0 0.2 0 0 0.05  0 0 0.2 0 0.05  0 0 0 1 0"/>
+          </filter>
+        </defs>
+        <rect width="100%" height="100%" fill="#090d16" filter="url(#heroNoise)"/>
+      </svg>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -111,8 +119,8 @@
     </div>
   </header>
 
-  <!-- Materials & Services Section (Strictly Macro Close-Up Shingle & Metal Textures) -->
-  <section id="services" class="py-20 bg-white px-4 sm:px-6 lg:px-8">
+  <!-- Materials & Services Section (Pure Native SVG Granule & Metal Textures) -->
+  <section id="services" class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-500/10 text-amber-700 border-amber-500/30">Premium Materials</span>
@@ -122,11 +130,25 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- 1. Architectural Shingles (Macro Close-Up Shingle Texture) -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="h-56 relative overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?auto=compress&cs=tinysrgb&w=800" alt="Architectural asphalt shingles macro close-up texture" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+        <!-- 1. Architectural Shingles (Native SVG Granule Texture & Overlapping Layers) -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="h-56 relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
+              <defs>
+                <filter id="archGranules">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" result="noise"/>
+                  <feColorMatrix type="matrix" values="0.25 0 0 0 0.08  0 0.25 0 0 0.08  0 0 0.25 0 0.08  0 0 0 1 0"/>
+                </filter>
+              </defs>
+              <rect width="100%" height="100%" fill="#334155" filter="url(#archGranules)"/>
+              <path d="M0 45 H400 V70 H0 Z" fill="#1e293b" opacity="0.95"/>
+              <path d="M0 90 H400 V115 H0 Z" fill="#1e293b" opacity="0.95"/>
+              <path d="M0 135 H400 V160 H0 Z" fill="#1e293b" opacity="0.95"/>
+              <path d="M0 180 H400 V205 H0 Z" fill="#1e293b" opacity="0.95"/>
+              <line x1="133" y1="0" x2="133" y2="250" stroke="#0f172a" stroke-width="4"/>
+              <line x1="266" y1="0" x2="266" y2="250" stroke="#0f172a" stroke-width="4"/>
+            </svg>
+            <span class="absolute bottom-3 left-3 bg-slate-950/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10 z-10">
               <i class="fa-solid fa-layer-group text-amber-400 mr-1.5"></i> Architectural Grade
             </span>
           </div>
@@ -135,18 +157,40 @@
               <h4 class="text-xl font-bold text-slate-900">Architectural Shingles</h4>
               <p class="text-slate-600 text-sm leading-relaxed mt-2">Dimensional, heavy-duty asphalt shingles designed to mimic natural wood shake or slate while offering exceptional wind resistance.</p>
             </div>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-200">
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Enhanced wind uplift resistance</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Multi-layer dimensional profile</li>
             </ul>
           </div>
         </div>
 
-        <!-- 2. Standing Seam Metal (Macro Close-Up Metal Panel Texture) -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="h-56 relative overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1558442088-4f71a06d091e?auto=compress&cs=tinysrgb&w=800" alt="Standing seam metal roofing macro panel texture" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+        <!-- 2. Standing Seam Metal (Native SVG Metal Seams & Lighting Gradients) -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="h-56 relative bg-slate-950 overflow-hidden flex items-center justify-center">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="metalPanel" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#1e293b"/>
+                  <stop offset="30%" stop-color="#475569"/>
+                  <stop offset="50%" stop-color="#64748b"/>
+                  <stop offset="70%" stop-color="#334155"/>
+                  <stop offset="100%" stop-color="#0f172a"/>
+                </linearGradient>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#metalPanel)"/>
+              <!-- Seam Ribs -->
+              <rect x="0" y="0" width="16" height="250" fill="#020617"/>
+              <rect x="100" y="0" width="16" height="250" fill="#020617"/>
+              <rect x="200" y="0" width="16" height="250" fill="#020617"/>
+              <rect x="300" y="0" width="16" height="250" fill="#020617"/>
+              <rect x="384" y="0" width="16" height="250" fill="#020617"/>
+              <!-- Highlight lines -->
+              <line x1="3" y1="0" x2="3" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
+              <line x1="103" y1="0" x2="103" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
+              <line x1="203" y1="0" x2="203" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
+              <line x1="303" y1="0" x2="303" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
+            </svg>
+            <span class="absolute bottom-3 left-3 bg-slate-950/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10 z-10">
               <i class="fa-solid fa-warehouse text-amber-400 mr-1.5"></i> Metal Systems
             </span>
           </div>
@@ -155,18 +199,35 @@
               <h4 class="text-xl font-bold text-slate-900">Standing Seam Metal</h4>
               <p class="text-slate-600 text-sm leading-relaxed mt-2">Sleek, highly durable metal roofing panels that reflect solar heat and deliver 50+ years of lifetime protection against severe storms.</p>
             </div>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-200">
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> 50+ year structural lifespan</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Superior energy efficiency</li>
             </ul>
           </div>
         </div>
 
-        <!-- 3. Impact-Resistant Shingles (Macro Close-Up Shingle Texture) -->
-        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="h-56 relative overflow-hidden bg-slate-200">
-            <img src="https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?auto=compress&cs=tinysrgb&w=800" alt="Impact resistant shingle macro close-up texture" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+        <!-- 3. Impact-Resistant Shingles (Native SVG Class 4 Granule Texture) -->
+        <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
+          <div class="h-56 relative bg-slate-900 overflow-hidden flex items-center justify-center">
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
+              <defs>
+                <filter id="impactGranules">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.95" numOctaves="4" result="noise"/>
+                  <feColorMatrix type="matrix" values="0.2 0 0 0 0.05  0 0.2 0 0 0.05  0 0 0.2 0 0.05  0 0 0 1 0"/>
+                </filter>
+              </defs>
+              <rect width="100%" height="100%" fill="#1e293b" filter="url(#impactGranules)"/>
+              <path d="M0 35 H400 V55 H0 Z" fill="#0f172a" opacity="0.9"/>
+              <path d="M0 75 H400 V95 H0 Z" fill="#0f172a" opacity="0.9"/>
+              <path d="M0 115 H400 V135 H0 Z" fill="#0f172a" opacity="0.9"/>
+              <path d="M0 155 H400 V175 H0 Z" fill="#0f172a" opacity="0.9"/>
+              <path d="M0 195 H400 V215 H0 Z" fill="#0f172a" opacity="0.9"/>
+              <line x1="80" y1="0" x2="80" y2="250" stroke="#020617" stroke-width="3"/>
+              <line x1="160" y1="0" x2="160" y2="250" stroke="#020617" stroke-width="3"/>
+              <line x1="240" y1="0" x2="240" y2="250" stroke="#020617" stroke-width="3"/>
+              <line x1="320" y1="0" x2="320" y2="250" stroke="#020617" stroke-width="3"/>
+            </svg>
+            <span class="absolute bottom-3 left-3 bg-slate-950/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10 z-10">
               <i class="fa-solid fa-shield-halved text-amber-400 mr-1.5"></i> Class 4 Rated
             </span>
           </div>
@@ -175,7 +236,7 @@
               <h4 class="text-xl font-bold text-slate-900">Impact-Resistant Shingles</h4>
               <p class="text-slate-600 text-sm leading-relaxed mt-2">Class 4 impact-rated shingles engineered to withstand heavy hail strikes and qualify many homeowners for insurance premium discounts.</p>
             </div>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-200">
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Highest UL 2218 hail rating</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Qualifies for insurance discounts</li>
             </ul>
@@ -187,7 +248,7 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8 border-t border-slate-200">
+  <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-t border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
         <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-500/10 text-amber-700 border-amber-500/30">Local Reputation</span>
@@ -197,42 +258,42 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Review 1 -->
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex text-amber-400 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-700 text-sm leading-relaxed">"After the last severe storm, they came out the next morning, tarped our roof, and handled the insurance claim process seamlessly. Absolute professionals!"</p>
           </div>
-          <div class="pt-4 border-t border-slate-100">
+          <div class="pt-4 border-t border-slate-200">
             <h5 class="font-bold text-slate-900 text-sm">Mark R.</h5>
             <span class="text-xs text-slate-500">Homewood, AL</span>
           </div>
         </div>
 
         <!-- Review 2 -->
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex text-amber-400 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-700 text-sm leading-relaxed">"Incredible turnaround time on our architectural shingle replacement. The crew cleaned up every stray nail and left the yard spotless. Highly recommend."</p>
           </div>
-          <div class="pt-4 border-t border-slate-100">
+          <div class="pt-4 border-t border-slate-200">
             <h5 class="font-bold text-slate-900 text-sm">Sarah T.</h5>
             <span class="text-xs text-slate-500">Vestavia Hills, AL</span>
           </div>
         </div>
 
         <!-- Review 3 -->
-        <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
+        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4 flex flex-col justify-between">
           <div class="space-y-3">
             <div class="flex text-amber-400 text-sm">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="text-slate-700 text-sm leading-relaxed">"Fair pricing, clear communication, and top-tier metal roofing installation. It completely changed the look of our home. Couldn't be happier!"</p>
           </div>
-          <div class="pt-4 border-t border-slate-100">
+          <div class="pt-4 border-t border-slate-200">
             <h5 class="font-bold text-slate-900 text-sm">David M.</h5>
             <span class="text-xs text-slate-500">Mountain Brook, AL</span>
           </div>
