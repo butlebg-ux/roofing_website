@@ -1,350 +1,490 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise Dual-Mode Control Center (Modern & Industrial)</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Smooth transition between views */
-        .view-transition {
-            transition: all 0.3s ease-in-out;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premier Roofing | Residential & Industrial Solutions</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
+  <!-- Local SEO Schema Markup for Industrial Division -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "IndustrialEnterprise",
+    "name": "Premier Industrial Roofing",
+    "description": "Heavy industrial roofing, mill coatings, and rail-served facility maintenance across Alabama and the Southeast.",
+    "areaServed": {
+      "@type": "State",
+      "name": "Alabama"
+    },
+    "serviceType": ["Plant Roofing", "Structural Standing Seam", "Destructive Core Testing", "MSHA/OSHA Certified Maintenance"]
+  }
+  </script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-white text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
 
-    <!-- Top Navigation & View Switcher Bar -->
-    <header class="bg-slate-900 border-b border-slate-800 px-6 py-4 flex justify-between items-center shadow-md">
-        <div class="flex items-center space-x-3">
-            <div class="bg-indigo-600 p-2.5 rounded-xl text-white shadow-lg shadow-indigo-500/30">
-                <i class="fa-solid fa-cube text-xl"></i>
-            </div>
-            <div>
-                <h1 class="text-xl font-bold tracking-tight text-white">OmniCorp Control System</h1>
-                <p class="text-xs text-slate-400">Integrated Facility & Analytics Hub</p>
-            </div>
-        </div>
+  <!-- ==================== PROSPECT VIEW SWITCHER BAR ==================== -->
+  <div class="bg-slate-950 text-white py-3 px-4 sticky top-0 z-[100] border-b border-slate-800 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
+      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
+        <i class="fa-solid fa-sliders"></i> Toggle Prospect View:
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="switchView('modern')" id="btn-modern" class="view-btn px-5 py-2 rounded-lg text-xs font-bold bg-amber-600 text-white shadow transition">
+          1. Modern (Residential)
+        </button>
+        <button onclick="switchView('industrial')" id="btn-industrial" class="view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition">
+          2. Heavy Industrial & Plant Operations
+        </button>
+      </div>
+    </div>
+  </div>
 
-        <!-- View Switcher Tabs -->
-        <div class="bg-slate-950 p-1.5 rounded-xl border border-slate-800 flex space-x-1">
-            <button id="btn-modern" onclick="switchView('modern')" class="px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 bg-indigo-600 text-white shadow-md">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <span>Modern View</span>
-            </button>
-            <button id="btn-industrial" onclick="switchView('industrial')" class="px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-white">
-                <i class="fa-solid fa-industry"></i>
-                <span>Industrial View</span>
-            </button>
+
+  <!-- ================================================================= -->
+  <!-- ==================== VIEW 1: MODERN (RESIDENTIAL) ================ -->
+  <!-- ================================================================= -->
+  <div id="view-modern" class="view-panel">
+    
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+          <span><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> Licensed, Bonded & Insured Contractor</span>
+          <span class="hidden md:inline text-slate-600">|</span>
+          <span class="hidden md:inline"><i class="fa-solid fa-star text-amber-400 mr-1.5"></i> 5-Star Local Rating</span>
         </div>
+        <div class="flex items-center gap-4">
+          <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Birmingham & Surrounding Areas</span>
+          <a href="tel:2055550199" class="font-bold text-white hover:underline"><i class="fa-solid fa-phone text-amber-500 mr-1"></i> (205) 555-0199</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-[53px] z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-amber-600/20">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none">Premier Roofing</h2>
+            <span class="text-xs text-slate-500 font-semibold tracking-wide uppercase">Residential Division</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:2055550199" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200 text-slate-800 hover:bg-slate-50 transition">
+            <i class="fa-solid fa-phone-volume mr-2 text-amber-500"></i> (205) 555-0199
+          </a>
+          <a href="#contact-modern" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-amber-600/20 transition">
+            Free Estimate
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-slate-950/50 backdrop-blur-[1px]"></div>
+      <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-amber-500/40 bg-slate-950/60 text-amber-400">
+            <i class="fa-solid fa-award"></i> Proudly Serving Alabama Homeowners
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-md">
+            Quality Roofing You Can <span class="text-amber-400">Trust</span>
+          </h1>
+          <p class="text-lg text-slate-100 max-w-xl leading-relaxed">
+            From emergency storm repairs to complete architectural shingle replacements, our certified local crews deliver unmatched craftsmanship and durable home protection.
+          </p>
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <a href="tel:2055550199" class="bg-amber-600 hover:bg-amber-700 text-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-600/30 text-base transition">
+              <i class="fa-solid fa-phone"></i> Call Now (205) 555-0199
+            </a>
+          </div>
+        </div>
+        <div id="contact-modern" class="lg:col-span-5 bg-white text-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-100">
+          <h3 class="text-2xl font-black text-slate-900 tracking-tight">Request Free Inspection</h3>
+          <p class="text-sm text-slate-500 mt-1 mb-5">Fast response time & zero-obligation quotes.</p>
+          <form class="space-y-4" onsubmit="event.preventDefault(); alert('Residential quote request sent!');">
+            <input type="text" required placeholder="Full Name" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50">
+            <input type="tel" required placeholder="Phone Number" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50">
+            <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-amber-600 hover:bg-amber-700 transition">Claim Free Inspection</button>
+          </form>
+        </div>
+      </div>
     </header>
 
-    <!-- Main Container -->
-    <main class="flex-grow p-6 max-w-7xl mx-auto w-full">
-
-        <!-- ================= MODERN VIEW ================= -->
-        <div id="view-modern" class="view-transition space-y-6">
-            <!-- Modern Header Banner -->
-            <div class="bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-slate-900 border border-indigo-500/20 rounded-3xl p-8 shadow-2xl relative overflow-hidden">
-                <div class="absolute -right-10 -bottom-10 opacity-10 text-indigo-400">
-                    <i class="fa-solid fa-feather-pointed text-9xl"></i>
-                </div>
-                <div class="max-w-2xl relative z-10">
-                    <span class="bg-indigo-500/10 text-indigo-400 text-xs font-semibold px-3 py-1 rounded-full border border-indigo-500/20 uppercase tracking-wider">Pristine Dashboard</span>
-                    <h2 class="text-3xl font-bold text-white mt-3 mb-2">Welcome back, Administrator</h2>
-                    <p class="text-slate-300 text-sm leading-relaxed">Your modern interface is fully restored with fluid glassmorphism aesthetics, elevated metrics, and optimized real-time analytics.</p>
-                </div>
-            </div>
-
-            <!-- Modern KPI Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg hover:border-indigo-500/50 transition-all">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-slate-400 text-xs uppercase font-semibold">System Efficiency</p>
-                            <h3 class="text-3xl font-extrabold text-white mt-2">98.4%</h3>
-                        </div>
-                        <div class="bg-emerald-500/10 text-emerald-400 p-3 rounded-xl border border-emerald-500/20">
-                            <i class="fa-solid fa-arrow-trend-up text-lg"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex items-center text-xs text-emerald-400 font-medium">
-                        <i class="fa-solid fa-plus mr-1"></i> 2.4% from last hour
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg hover:border-indigo-500/50 transition-all">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-slate-400 text-xs uppercase font-semibold">Active Nodes</p>
-                            <h3 class="text-3xl font-extrabold text-white mt-2">1,248</h3>
-                        </div>
-                        <div class="bg-indigo-500/10 text-indigo-400 p-3 rounded-xl border border-indigo-500/20">
-                            <i class="fa-solid fa-network-wired text-lg"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex items-center text-xs text-indigo-400 font-medium">
-                        <i class="fa-solid fa-circle text-[8px] mr-1.5 animate-pulse"></i> All clusters healthy
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg hover:border-indigo-500/50 transition-all">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-slate-400 text-xs uppercase font-semibold">Data Throughput</p>
-                            <h3 class="text-3xl font-extrabold text-white mt-2">42.8 GB/s</h3>
-                        </div>
-                        <div class="bg-sky-500/10 text-sky-400 p-3 rounded-xl border border-sky-500/20">
-                            <i class="fa-solid fa-bolt text-lg"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex items-center text-xs text-sky-400 font-medium">
-                        <i class="fa-solid fa-gauge-high mr-1"></i> Peak bandwidth normal
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg hover:border-indigo-500/50 transition-all">
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <p class="text-slate-400 text-xs uppercase font-semibold">Active Alerts</p>
-                            <h3 class="text-3xl font-extrabold text-white mt-2">0</h3>
-                        </div>
-                        <div class="bg-purple-500/10 text-purple-400 p-3 rounded-xl border border-purple-500/20">
-                            <i class="fa-solid fa-shield-halved text-lg"></i>
-                        </div>
-                    </div>
-                    <div class="mt-4 flex items-center text-xs text-purple-400 font-medium">
-                        <i class="fa-solid fa-check mr-1"></i> Zero security incidents
-                    </div>
-                </div>
-            </div>
-
-            <!-- Modern Content Panels -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2 bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg">
-                    <div class="flex justify-between items-center mb-6">
-                        <h3 class="text-lg font-bold text-white flex items-center"><i class="fa-solid fa-chart-line text-indigo-400 mr-2"></i> Real-time Performance Stream</h3>
-                        <span class="text-xs text-slate-400 bg-slate-800 px-3 py-1 rounded-lg">Live Telemetry</span>
-                    </div>
-                    <div class="h-64 flex items-end justify-between gap-2 pt-6 px-2 border-b border-slate-800">
-                        <!-- Simulated Modern Bar Chart -->
-                        <div class="w-full bg-indigo-600/20 rounded-t-lg hover:bg-indigo-500 transition-all h-[60%] relative group">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">60%</span>
-                        </div>
-                        <div class="w-full bg-indigo-600/40 rounded-t-lg hover:bg-indigo-500 transition-all h-[80%] relative group">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">80%</span>
-                        </div>
-                        <div class="w-full bg-indigo-600/30 rounded-t-lg hover:bg-indigo-500 transition-all h-[50%] relative group">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">50%</span>
-                        </div>
-                        <div class="w-full bg-indigo-600/70 rounded-t-lg hover:bg-indigo-500 transition-all h-[90%] relative group">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">90%</span>
-                        </div>
-                        <div class="w-full bg-indigo-600/50 rounded-t-lg hover:bg-indigo-500 transition-all h-[70%] relative group">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">70%</span>
-                        </div>
-                        <div class="w-full bg-indigo-600 rounded-t-lg hover:bg-indigo-400 transition-all h-[95%] relative group shadow-lg shadow-indigo-500/30">
-                            <span class="absolute -top-7 left-1/2 -translate-x-1/2 text-xs text-slate-300 opacity-0 group-hover:opacity-100 transition-opacity">95%</span>
-                        </div>
-                    </div>
-                    <div class="flex justify-between text-xs text-slate-400 mt-4 px-2">
-                        <span>00:00</span><span>04:00</span><span>08:00</span><span>12:00</span><span>16:00</span><span>20:00</span>
-                    </div>
-                </div>
-
-                <div class="bg-slate-900/80 backdrop-blur border border-slate-800 rounded-2xl p-6 shadow-lg flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-4 flex items-center"><i class="fa-solid fa-sliders text-indigo-400 mr-2"></i> Quick Controls</h3>
-                        <div class="space-y-4">
-                            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between">
-                                <div class="flex items-center space-x-3">
-                                    <div class="bg-indigo-500/10 text-indigo-400 p-2 rounded-lg">
-                                        <i class="fa-solid fa-power-off"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-semibold text-white">Auto-Scaling Engine</h4>
-                                        <p class="text-xs text-slate-400">Dynamic resource allocation</p>
-                                    </div>
-                                </div>
-                                <input type="checkbox" checked class="w-5 h-5 accent-indigo-600 rounded cursor-pointer">
-                            </div>
-                            <div class="bg-slate-950 p-4 rounded-xl border border-slate-800 flex items-center justify-between">
-                                <div class="flex items-center space-x-3">
-                                    <div class="bg-indigo-500/10 text-indigo-400 p-2 rounded-lg">
-                                        <i class="fa-solid fa-bell"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-sm font-semibold text-white">Push Notifications</h4>
-                                        <p class="text-xs text-slate-400">Instant anomaly alerts</p>
-                                    </div>
-                                </div>
-                                <input type="checkbox" checked class="w-5 h-5 accent-indigo-600 rounded cursor-pointer">
-                            </div>
-                        </div>
-                    </div>
-                    <button onclick="alert('Modern preferences updated successfully!')" class="w-full mt-6 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3 rounded-xl transition-all shadow-lg shadow-indigo-600/30 text-sm">
-                        Save Configurations
-                    </button>
-                </div>
-            </div>
+    <!-- Stats Bar -->
+    <section class="bg-amber-600 text-white py-10 px-4">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-black">15+ Years</div>
+          <div class="text-amber-100 text-sm font-medium mt-1">Local Roofing Experience</div>
         </div>
-
-
-        <!-- ================= INDUSTRIAL VIEW ================= -->
-        <div id="view-industrial" class="view-transition hidden space-y-6">
-            <!-- Industrial Header Banner -->
-            <div class="bg-zinc-900 border-2 border-amber-500/40 rounded-xl p-6 shadow-2xl relative">
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                    <div>
-                        <div class="flex items-center space-x-2">
-                            <span class="w-3 h-3 bg-amber-500 rounded-full animate-ping"></span>
-                            <span class="text-amber-400 text-xs font-mono font-bold uppercase tracking-wider">SEC-A // PLANT FLOOR MONITORING</span>
-                        </div>
-                        <h2 class="text-2xl font-mono font-bold text-white mt-1">HEAVY INDUSTRY CONTROL DECK</h2>
-                    </div>
-                    <div class="flex space-x-3">
-                        <div class="bg-zinc-950 border border-zinc-800 px-4 py-2 rounded font-mono text-xs text-amber-400">
-                            SYS_STATUS: <span class="text-emerald-400 font-bold">NOMINAL</span>
-                        </div>
-                        <div class="bg-zinc-950 border border-zinc-800 px-4 py-2 rounded font-mono text-xs text-zinc-300">
-                            PRESSURE: <span class="text-white font-bold">1,420 PSI</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Industrial Grid & Machinery Telemetry -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
-                <!-- Unit 01 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5 shadow-lg">
-                    <div class="flex justify-between items-center border-b border-zinc-800 pb-3 mb-4">
-                        <span class="text-xs text-zinc-400">UNIT_ID: #TR-102</span>
-                        <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-2 py-0.5 rounded border border-emerald-500/30">ACTIVE</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Hydraulic Press Alpha</h3>
-                    <div class="space-y-2 text-xs text-zinc-400">
-                        <div class="flex justify-between"><span>Core Temp:</span><span class="text-amber-400 font-bold">342 °C</span></div>
-                        <div class="flex justify-between"><span>Stroke Cycle:</span><span class="text-white font-bold">4.2s</span></div>
-                        <div class="flex justify-between"><span>Load Capacity:</span><span class="text-white font-bold">85%</span></div>
-                    </div>
-                    <div class="mt-5 pt-3 border-t border-zinc-800 flex justify-between items-center">
-                        <span class="text-[10px] text-zinc-500">OP_TIME: 1,420 HRS</span>
-                        <button class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-3 py-1 text-xs rounded transition-all">DIAGNOSTICS</button>
-                    </div>
-                </div>
-
-                <!-- Unit 02 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5 shadow-lg">
-                    <div class="flex justify-between items-center border-b border-zinc-800 pb-3 mb-4">
-                        <span class="text-xs text-zinc-400">UNIT_ID: #TR-103</span>
-                        <span class="bg-emerald-500/20 text-emerald-400 text-[10px] px-2 py-0.5 rounded border border-emerald-500/30">ACTIVE</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Turbine Generator Beta</h3>
-                    <div class="space-y-2 text-xs text-zinc-400">
-                        <div class="flex justify-between"><span>Core Temp:</span><span class="text-amber-400 font-bold">410 °C</span></div>
-                        <div class="flex justify-between"><span>RPM Output:</span><span class="text-white font-bold">12,450</span></div>
-                        <div class="flex justify-between"><span>Load Capacity:</span><span class="text-white font-bold">92%</span></div>
-                    </div>
-                    <div class="mt-5 pt-3 border-t border-zinc-800 flex justify-between items-center">
-                        <span class="text-[10px] text-zinc-500">OP_TIME: 3,110 HRS</span>
-                        <button class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-3 py-1 text-xs rounded transition-all">DIAGNOSTICS</button>
-                    </div>
-                </div>
-
-                <!-- Unit 03 -->
-                <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-5 shadow-lg">
-                    <div class="flex justify-between items-center border-b border-zinc-800 pb-3 mb-4">
-                        <span class="text-xs text-zinc-400">UNIT_ID: #TR-104</span>
-                        <span class="bg-amber-500/20 text-amber-400 text-[10px] px-2 py-0.5 rounded border border-amber-500/30">STANDBY</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Cooling Tower Gamma</h3>
-                    <div class="space-y-2 text-xs text-zinc-400">
-                        <div class="flex justify-between"><span>Core Temp:</span><span class="text-emerald-400 font-bold">68 °C</span></div>
-                        <div class="flex justify-between"><span>Flow Rate:</span><span class="text-white font-bold">450 L/m</span></div>
-                        <div class="flex justify-between"><span>Load Capacity:</span><span class="text-white font-bold">12%</span></div>
-                    </div>
-                    <div class="mt-5 pt-3 border-t border-zinc-800 flex justify-between items-center">
-                        <span class="text-[10px] text-zinc-500">OP_TIME: 890 HRS</span>
-                        <button class="bg-amber-500 hover:bg-amber-400 text-zinc-950 font-bold px-3 py-1 text-xs rounded transition-all">DIAGNOSTICS</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Industrial Telemetry Log Table -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-lg font-mono">
-                <h3 class="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4"><i class="fa-solid fa-table-list mr-2"></i> Real-time Plant Event Log</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left text-xs text-zinc-300">
-                        <thead class="bg-zinc-950 text-zinc-400 border-b border-zinc-800">
-                            <tr>
-                                <th class="p-3">TIMESTAMP</th>
-                                <th class="p-3">SECTOR</th>
-                                <th class="p-3">EVENT CODE</th>
-                                <th class="p-3">DESCRIPTION</th>
-                                <th class="p-3">STATUS</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-zinc-800/50">
-                            <tr class="hover:bg-zinc-800/40">
-                                <td class="p-3 text-zinc-400">18:41:02 UTC</td>
-                                <td class="p-3 text-amber-400">SECTOR_A</td>
-                                <td class="p-3 font-bold">ERR_CODE_01</td>
-                                <td class="p-3">Hydraulic pressure valve recalibrated successfully.</td>
-                                <td class="p-3 text-emerald-400 font-bold">RESOLVED</td>
-                            </tr>
-                            <tr class="hover:bg-zinc-800/40">
-                                <td class="p-3 text-zinc-400">18:39:15 UTC</td>
-                                <td class="p-3 text-amber-400">SECTOR_B</td>
-                                <td class="p-3 font-bold">WARN_TEMP_99</td>
-                                <td class="p-3">Turbine Beta operating at high sustained thermal load.</td>
-                                <td class="p-3 text-amber-400 font-bold">MONITORING</td>
-                            </tr>
-                            <tr class="hover:bg-zinc-800/40">
-                                <td class="p-3 text-zinc-400">18:30:00 UTC</td>
-                                <td class="p-3 text-amber-400">SECTOR_C</td>
-                                <td class="p-3 font-bold">SYS_CYCLE_OK</td>
-                                <td class="p-3">Cooling tower cycle completed routine flush sequence.</td>
-                                <td class="p-3 text-emerald-400 font-bold">SUCCESS</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        <div>
+          <div class="text-4xl font-black">4,500+</div>
+          <div class="text-amber-100 text-sm font-medium mt-1">Residential Roofs Completed</div>
         </div>
+        <div>
+          <div class="text-4xl font-black">100%</div>
+          <div class="text-amber-100 text-sm font-medium mt-1">Satisfaction Guarantee</div>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- Services Grid Section -->
+    <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-500/10 text-amber-700 border-amber-500/30">Residential Solutions</span>
+          <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Complete Home Exterior Services</h3>
+          <p class="text-slate-600 text-base">Protect your investment with top-tier materials backed by industry-leading warranties.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900">Architectural Shingles</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">High-performance dimensional shingles designed to withstand high winds and severe weather while boosting curb appeal.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-cloud-bolt"></i>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900">Storm & Hail Restoration</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Expert insurance claim guidance and rapid repairs following severe wind, hail, or storm damage in your neighborhood.</p>
+          </div>
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
+            <div class="w-12 h-12 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-xl font-bold">
+              <i class="fa-solid fa-water"></i>
+            </div>
+            <h4 class="text-xl font-bold text-slate-900">Gutters & Ventilation</h4>
+            <p class="text-slate-600 text-sm leading-relaxed">Seamless gutter installation and optimal attic ventilation systems to prevent moisture buildup and ice dams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-        OmniCorp Enterprise Systems &bull; Modern & Industrial Views Unified Suite
+    <footer class="bg-slate-950 text-slate-400 py-12 px-4 text-center border-t border-slate-800">
+      <div class="max-w-7xl mx-auto space-y-3">
+        <h4 class="text-white text-xl font-black">Premier Roofing | Residential Division</h4>
+        <p class="text-sm">Call Us Today: <a href="tel:2055550199" class="text-white font-bold hover:underline">(205) 555-0199</a></p>
+        <p class="text-xs text-slate-600 pt-4">&copy; 2026 Premier Roofing. All rights reserved. Licensed & Insured.</p>
+      </div>
     </footer>
+  </div>
 
-    <!-- View Switcher Script -->
-    <script>
-        function switchView(mode) {
-            const modernView = document.getElementById('view-modern');
-            const industrialView = document.getElementById('view-industrial');
-            const btnModern = document.getElementById('btn-modern');
-            const btnIndustrial = document.getElementById('btn-industrial');
 
-            if (mode === 'modern') {
-                modernView.classList.remove('hidden');
-                industrialView.classList.add('hidden');
+  <!-- ================================================================= -->
+  <!-- ==================== VIEW 2: INDUSTRIAL (HEAVY PLANT) =========== -->
+  <!-- ================================================================= -->
+  <div id="view-industrial" class="view-panel hidden bg-zinc-950 text-zinc-100">
+    
+    <!-- Top Bar -->
+    <div class="bg-zinc-900 text-zinc-400 text-xs sm:text-sm py-2.5 px-4 border-b border-zinc-800">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-4">
+          <span><i class="fa-solid fa-hard-hat text-yellow-400 mr-1.5"></i> MSHA & OSHA Heavy Plant Certified</span>
+          <span class="hidden md:inline text-zinc-700">|</span>
+          <span class="hidden md:inline"><i class="fa-solid fa-industry text-yellow-400 mr-1.5"></i> Heavy Industrial & Rail-Served Facilities</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span><i class="fa-solid fa-clock text-yellow-400 mr-1"></i> 24/7 Plant Maintenance Dispatch</span>
+          <a href="tel:2055550199" class="font-bold text-white hover:underline"><i class="fa-solid fa-phone text-yellow-400 mr-1"></i> (205) 555-0199</a>
+        </div>
+      </div>
+    </div>
 
-                btnModern.className = "px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 bg-indigo-600 text-white shadow-md";
-                btnIndustrial.className = "px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-white";
-            } else {
-                industrialView.classList.remove('hidden');
-                modernView.classList.add('hidden');
+    <!-- Navigation -->
+    <nav class="sticky top-[53px] z-50 bg-zinc-900/95 backdrop-blur-md shadow-lg border-b border-zinc-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 bg-yellow-500 text-zinc-950 rounded-xl flex items-center justify-center font-black text-xl shadow-lg shadow-yellow-500/20">
+            <i class="fa-solid fa-industry"></i>
+          </div>
+          <div>
+            <h2 class="text-lg sm:text-xl font-black text-white tracking-tight leading-none">Premier Industrial</h2>
+            <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Heavy Manufacturing & Logistics Division</span>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:2055550199" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm border border-zinc-700 text-zinc-200 hover:bg-zinc-800 transition">
+            <i class="fa-solid fa-phone-volume mr-2 text-yellow-400"></i> Plant Dispatch
+          </a>
+          <a href="#contact-industrial" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 px-6 py-3 rounded-xl font-extrabold text-sm shadow-lg shadow-yellow-500/20 transition">
+            Request Plant Audit
+          </a>
+        </div>
+      </div>
+    </nav>
 
-                btnIndustrial.className = "px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 bg-amber-500 text-zinc-950 font-bold shadow-md shadow-amber-500/20";
-                btnModern.className = "px-5 py-2 rounded-lg text-sm font-medium transition-all flex items-center space-x-2 text-slate-400 hover:text-white";
-            }
-        }
-    </script>
+    <!-- Hero Section -->
+    <header class="relative text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-zinc-950/90 backdrop-blur-[2px]"></div>
+      <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold border border-yellow-500/40 bg-zinc-900 text-yellow-400 tracking-wider">
+            <i class="fa-solid fa-shield-halved"></i> Heavy Structural & Mill-Scale Engineering
+          </div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white">
+            Heavy Industrial & Plant <span class="text-yellow-400">Roofing Systems</span>
+          </h1>
+          <p class="text-lg text-zinc-300 max-w-xl leading-relaxed">
+            Engineered specifically for heavy manufacturing plants, multi-acre steel mills, rail-served distribution hubs, and bulk material processing facilities across the Southeast. Built to withstand corrosive environments and extreme structural load.
+          </p>
+          <div class="pt-2 flex flex-col sm:flex-row gap-4">
+            <a href="tel:2055550199" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold shadow-lg shadow-yellow-500/20 text-base transition">
+              <i class="fa-solid fa-phone"></i> Emergency Plant Dispatch (205) 555-0199
+            </a>
+          </div>
+        </div>
+        
+        <!-- Production-Ready Form Container with Dynamic Feedback State -->
+        <div id="contact-industrial" class="lg:col-span-5 bg-zinc-900 text-zinc-100 p-8 rounded-3xl shadow-2xl border border-zinc-800">
+          <div id="form-container">
+            <h3 class="text-2xl font-black text-white tracking-tight">Request Facility Core Audit</h3>
+            <p class="text-sm text-zinc-400 mt-1 mb-5">Destructive core sampling, moisture scans, & mill load calculations.</p>
+            
+            <form id="industrial-audit-form" class="space-y-4" onsubmit="handleIndustrialSubmit(event)">
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-1.5">Plant / Operations Manager</label>
+                <input type="text" id="manager-name" required class="w-full px-4 py-3 rounded-xl border border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-zinc-950 text-white" placeholder="Robert Vance">
+              </div>
+              <div>
+                <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-1.5">Direct Plant Line / Email</label>
+                <input type="text" id="contact-info" required class="w-full px-4 py-3 rounded-xl border border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-zinc-950 text-white" placeholder="(205) 555-0199 or r.vance@plant.com">
+              </div>
+              <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl font-black text-zinc-950 shadow-lg bg-yellow-500 hover:bg-yellow-400 transition flex items-center justify-center gap-2">
+                <span>Schedule Plant Assessment</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Success Message State -->
+          <div id="form-success" class="hidden text-center py-8 space-y-4">
+            <div class="w-16 h-16 bg-yellow-500/20 text-yellow-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-yellow-500/40">
+              <i class="fa-solid fa-check"></i>
+            </div>
+            <h4 class="text-2xl font-black text-white">Audit Request Logged</h4>
+            <p class="text-sm text-zinc-300 leading-relaxed">
+              Thank you, <span id="display-name" class="font-bold text-yellow-400"></span>. Our Lead Industrial Engineer & MSHA Safety Officer will contact your facility direct line within 2 business hours.
+            </p>
+            <button onclick="resetIndustrialForm()" class="mt-4 px-6 py-2.5 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-200 hover:bg-zinc-700 transition">
+              Submit Another Inquiry
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="bg-yellow-500 text-zinc-950 py-10 px-4">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-black">25+ Years</div>
+          <div class="text-zinc-900 text-sm font-bold mt-1">Heavy Industrial Contracting</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black">20M+ Sq. Ft.</div>
+          <div class="text-zinc-900 text-sm font-bold mt-1">Mill & Warehouse Roofs Installed</div>
+        </div>
+        <div>
+          <div class="text-4xl font-black">$30M+</div>
+          <div class="text-zinc-900 text-sm font-bold mt-1">Bonding Capacity per Facility</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid Section -->
+    <section class="py-20 bg-zinc-900/50 px-4 sm:px-6 lg:px-8 border-b border-zinc-800">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-yellow-500/10 text-yellow-400 border-yellow-500/30">Plant Engineering</span>
+          <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Heavy Industrial & Mill Roofing Systems</h3>
+          <p class="text-zinc-400 text-base">Specialized low-slope, metal retrofit, and high-chemical-resistance membranes engineered for heavy industrial plants.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
+            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
+              <i class="fa-solid fa-industry"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Heavy-Duty TPO & EPDM</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Extra-thick chemical and puncture-resistant single-ply membranes designed to withstand heavy soot, exhaust, and industrial foot traffic.</p>
+          </div>
+          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
+            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
+              <i class="fa-solid fa-train"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Rail Terminal & Warehouse Metal</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">Concealed fastener structural standing seam metal roof systems built to endure severe vibration from rail spurs and heavy logistics operations.</p>
+          </div>
+          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
+            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h4 class="text-xl font-bold text-white">Mill Coating & Corrosion Armor</h4>
+            <p class="text-zinc-400 text-sm leading-relaxed">High-build elastomeric coatings formulated to protect aging steel decks against corrosive plant emissions and acid rain.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industrial Project Gallery Section -->
+    <section class="py-20 bg-zinc-950 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+          <div class="space-y-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-yellow-400">Heavy Plant Portfolio</span>
+            <h3 class="text-3xl sm:text-4xl font-black text-white">Industrial Mills & Logistics Hubs</h3>
+          </div>
+          <a href="#contact-industrial" class="mt-4 md:mt-0 text-sm font-bold text-yellow-400 hover:underline inline-flex items-center gap-2">
+            Request Engineering Case Studies <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="group relative rounded-2xl overflow-hidden border border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=compress&cs=tinysrgb&w=800" alt="Heavy Manufacturing Plant" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs text-yellow-400 font-bold uppercase tracking-wider">Birmingham Steel Mill</span>
+              <h4 class="text-lg font-bold">500,000 Sq. Ft. Heavy TPO Overhaul</h4>
+            </div>
+          </div>
+          <div class="group relative rounded-2xl overflow-hidden border border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=compress&cs=tinysrgb&w=800" alt="Rail Served Distribution Hub" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs text-yellow-400 font-bold uppercase tracking-wider">Bessemer Rail & Freight Terminal</span>
+              <h4 class="text-lg font-bold">Structural Standing Seam Retrofit</h4>
+            </div>
+          </div>
+          <div class="group relative rounded-2xl overflow-hidden border border-zinc-800">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=compress&cs=tinysrgb&w=800" alt="Heavy Industrial Plant Facility" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500 opacity-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-xs text-yellow-400 font-bold uppercase tracking-wider">Huntsville Industrial Complex</span>
+              <h4 class="text-lg font-bold">Corrosion Armor Silicone System</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-zinc-900/50 px-4 sm:px-6 lg:px-8 border-t border-zinc-800">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-yellow-500/10 text-yellow-400 border-yellow-500/30">Plant Standards</span>
+          <h3 class="text-3xl sm:text-4xl font-black text-white">Zero Downtime for Heavy Operations</h3>
+          <p class="text-zinc-400 leading-relaxed">We coordinate directly with plant managers, safety directors, and rail coordinators to execute complex roofing projects around 24/7 manufacturing schedules without disrupting production lines.</p>
+          <ul class="space-y-3 text-sm font-bold text-zinc-200">
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-yellow-400"></i> MSHA & OSHA Certified Site Safety Officers</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-yellow-400"></i> NDL (No Dollar Limit) Manufacturer Warranties</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-check text-yellow-400"></i> In-House Destructive Core & Uplift Testing</li>
+          </ul>
+        </div>
+        <div class="bg-zinc-900 p-8 rounded-3xl shadow-xl border border-zinc-800 space-y-6">
+          <h4 class="text-xl font-bold text-white">Plant Director Testimonial</h4>
+          <blockquote class="text-zinc-400 italic text-sm leading-relaxed">
+            &ldquo;Premier's industrial crew handled our multi-acre manufacturing plant roof replacement while our rail spurs and shipping docks remained fully active. Unmatched safety discipline and execution.&rdquo;
+          </blockquote>
+          <div class="flex items-center gap-4 pt-2 border-t border-zinc-800">
+            <div class="w-10 h-10 bg-zinc-950 text-yellow-400 rounded-full flex items-center justify-center font-bold border border-yellow-500/30">GR</div>
+            <div>
+              <div class="font-bold text-white text-sm">Gary R.</div>
+              <div class="text-xs text-zinc-500">VP of Manufacturing & Supply Chain</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-zinc-950 px-4 sm:px-6 lg:px-8 border-t border-zinc-800">
+      <div class="max-w-4xl mx-auto space-y-10">
+        <div class="text-center space-y-3">
+          <span class="text-xs font-bold uppercase tracking-widest text-yellow-400">Plant Inquiries</span>
+          <h3 class="text-3xl font-black text-white">Heavy Industrial Roofing FAQs</h3>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+            <h4 class="font-bold text-white mb-2">How do you handle roof replacements over active manufacturing plants?</h4>
+            <p class="text-sm text-zinc-400">We establish strict interior safety decking, odor-mitigation plans, and phased scheduling so your assembly lines and shipping operations never experience unscheduled downtime.</p>
+          </div>
+          <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800">
+            <h4 class="font-bold text-white mb-2">Are your crews certified for heavy industrial and mill sites?</h4>
+            <p class="text-sm text-zinc-400">Yes, all field supervisors and technicians maintain active MSHA Part 46/48, OSHA 30-Hour, and plant-specific safety clearances.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-950 text-zinc-400 py-12 px-4 text-center border-t border-zinc-800">
+      <div class="max-w-7xl mx-auto space-y-3">
+        <h4 class="text-white text-xl font-black">Premier Roofing | Heavy Industrial & Plant Division</h4>
+        <p class="text-sm">24/7 Plant Dispatch & Emergency Response: <a href="tel:2055550199" class="text-white font-bold hover:underline">(205) 555-0199</a></p>
+        <p class="text-xs text-zinc-600 pt-4">&copy; 2026 Premier Roofing. All rights reserved. Bonded, Licensed, & MSHA/OSHA Certified.</p>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT CONTROLLERS ==================== -->
+  <script>
+    function switchView(viewId) {
+      document.querySelectorAll('.view-panel').forEach(panel => {
+        panel.classList.add('hidden');
+      });
+      document.getElementById('view-' + viewId).classList.remove('hidden');
+
+      const btnModern = document.getElementById('btn-modern');
+      const btnIndustrial = document.getElementById('btn-industrial');
+
+      if (viewId === 'modern') {
+        btnModern.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold bg-amber-600 text-white shadow transition";
+        btnIndustrial.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition";
+      } else {
+        btnModern.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition";
+        btnIndustrial.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold bg-yellow-500 text-zinc-950 shadow transition font-black";
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleIndustrialSubmit(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const managerName = document.getElementById('manager-name').value;
+      
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Transmitting to Plant Dispatch...`;
+
+      setTimeout(() => {
+        document.getElementById('form-container').classList.add('hidden');
+        document.getElementById('display-name').textContent = managerName;
+        document.getElementById('form-success').classList.remove('hidden');
+      }, 1000);
+    }
+
+    function resetIndustrialForm() {
+      document.getElementById('industrial-audit-form').reset();
+      const submitBtn = document.getElementById('submit-btn');
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = `<span>Schedule Plant Assessment</span>`;
+      document.getElementById('form-success').classList.add('hidden');
+      document.getElementById('form-container').classList.remove('hidden');
+    }
+  </script>
+
 </body>
 </html>
-```eof
-
-Your application with both the pristine Modern View and the robust Industrial View fully restored and integrated into a seamless toggleable suite is ready! Please take a look and let me know if you need any adjustments.
