@@ -54,37 +54,30 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="relative bg-slate-950 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-slate-800">
-    <!-- Procedural SVG Background Texture -->
-    <div class="absolute inset-0 z-0 opacity-40">
-      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <filter id="heroNoise">
-            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
-            <feColorMatrix type="matrix" values="0.2 0 0 0 0.05  0 0.2 0 0 0.05  0 0 0.2 0 0.05  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <rect width="100%" height="100%" fill="#090d16" filter="url(#heroNoise)"/>
-      </svg>
+  <!-- Hero Section (Barely Shaded Background Image) -->
+  <header class="relative text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 z-0">
+      <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=compress&cs=tinysrgb&w=1600" alt="Roofing background texture" class="w-full h-full object-cover">
+      <!-- Barely shaded overlay (30% opacity so the background image is fully visible and clear) -->
+      <div class="absolute inset-0 bg-slate-950/30 backdrop-blur-[1px]"></div>
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 space-y-6">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-amber-500/40 bg-amber-500/10 text-amber-400">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-amber-500/40 bg-slate-950/60 backdrop-blur-md text-amber-400">
           <i class="fa-solid fa-award"></i> Proudly Serving Alabama Homeowners
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white">
-          Quality Roofing You Can <span class="text-amber-500">Trust</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] text-white drop-shadow-md">
+          Quality Roofing You Can <span class="text-amber-400">Trust</span>
         </h1>
-        <p class="text-lg text-slate-300 max-w-xl leading-relaxed">
+        <p class="text-lg text-slate-100 max-w-xl leading-relaxed drop-shadow">
           From emergency storm repairs to complete architectural shingle replacements, our certified local crews deliver unmatched craftsmanship and durable protection.
         </p>
         <div class="pt-2 flex flex-col sm:flex-row gap-4">
           <a href="tel:2055550199" class="bg-amber-600 hover:bg-amber-700 text-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold shadow-lg shadow-amber-600/30 text-base transition">
             <i class="fa-solid fa-phone"></i> Call Now (205) 555-0199
           </a>
-          <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-slate-800/80 hover:bg-slate-800 border border-slate-700 backdrop-blur-md shadow-sm text-base transition">
+          <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-slate-900/60 hover:bg-slate-900/80 border border-slate-600/50 backdrop-blur-md shadow-sm text-base transition">
             View Materials <i class="fa-solid fa-arrow-down text-xs"></i>
           </a>
         </div>
@@ -130,7 +123,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- 1. Architectural Shingles (Native SVG Granule Texture & Overlapping Layers) -->
+        <!-- 1. Architectural Shingles -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
           <div class="h-56 relative bg-slate-900 overflow-hidden flex items-center justify-center">
             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
@@ -164,7 +157,7 @@
           </div>
         </div>
 
-        <!-- 2. Standing Seam Metal (Native SVG Metal Seams & Lighting Gradients) -->
+        <!-- 2. Standing Seam Metal -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
           <div class="h-56 relative bg-slate-950 overflow-hidden flex items-center justify-center">
             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
@@ -178,13 +171,11 @@
                 </linearGradient>
               </defs>
               <rect width="100%" height="100%" fill="url(#metalPanel)"/>
-              <!-- Seam Ribs -->
               <rect x="0" y="0" width="16" height="250" fill="#020617"/>
               <rect x="100" y="0" width="16" height="250" fill="#020617"/>
               <rect x="200" y="0" width="16" height="250" fill="#020617"/>
               <rect x="300" y="0" width="16" height="250" fill="#020617"/>
               <rect x="384" y="0" width="16" height="250" fill="#020617"/>
-              <!-- Highlight lines -->
               <line x1="3" y1="0" x2="3" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
               <line x1="103" y1="0" x2="103" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
               <line x1="203" y1="0" x2="203" y2="250" stroke="#94a3b8" stroke-width="2" opacity="0.6"/>
@@ -206,7 +197,7 @@
           </div>
         </div>
 
-        <!-- 3. Impact-Resistant Shingles (Native SVG Class 4 Granule Texture) -->
+        <!-- 3. Impact-Resistant Shingles -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-200 group hover:shadow-xl transition-all duration-300 flex flex-col">
           <div class="h-56 relative bg-slate-900 overflow-hidden flex items-center justify-center">
             <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 250" preserveAspectRatio="none">
