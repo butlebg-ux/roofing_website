@@ -55,8 +55,11 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-slate-900 text-white py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <header class="relative bg-slate-900 text-white py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-30 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=1920');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-slate-950/70 z-10"></div>
+
+    <div class="relative z-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div class="lg:col-span-7 space-y-6">
         <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-amber-500/30 bg-amber-500/10 text-amber-400">
           <i class="fa-solid fa-award"></i> Proudly Serving Alabama Homeowners
@@ -71,7 +74,7 @@
           <a href="tel:2055550199" class="bg-amber-600 hover:bg-amber-700 text-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold shadow-xl text-base transition">
             <i class="fa-solid fa-phone"></i> Call Now (205) 555-0199
           </a>
-          <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 transition">
+          <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-bold text-white bg-slate-800/80 hover:bg-slate-700 border border-slate-700 transition">
             View Materials <i class="fa-solid fa-arrow-down text-xs"></i>
           </a>
         </div>
@@ -107,7 +110,7 @@
     </div>
   </header>
 
-  <!-- Materials & Services Section -->
+  <!-- Materials & Services Section with Verified Residential Roof Images -->
   <section id="services" class="py-20 bg-slate-100 px-4 sm:px-6 lg:px-8 border-y border-slate-200">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -118,57 +121,63 @@
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- 1. Architectural Shingles Card -->
+        <!-- 1. Architectural Shingles -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="p-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
-            <div class="absolute right-4 bottom-4 text-slate-700/30 text-7xl font-black pointer-events-none">01</div>
-            <div class="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-md mb-6">
-              <i class="fa-solid fa-layer-group"></i>
-            </div>
-            <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-lg border border-amber-400/20">Most Popular Choice</span>
-            <h4 class="text-2xl font-black mt-3">Architectural Shingles</h4>
+          <div class="h-56 relative overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=compress&cs=tinysrgb&w=800" alt="Suburban home with architectural asphalt shingle roof" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+              <i class="fa-solid fa-layer-group text-amber-400 mr-1.5"></i> Architectural Grade
+            </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <p class="text-slate-600 text-sm leading-relaxed">Dimensional, heavy-duty asphalt shingles designed to mimic natural wood shake or slate while offering exceptional wind resistance.</p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-2 border-t border-slate-100">
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">Architectural Shingles</h4>
+              <p class="text-slate-600 text-sm leading-relaxed mt-2">Dimensional, heavy-duty asphalt shingles designed to mimic natural wood shake or slate while offering exceptional wind resistance.</p>
+            </div>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Enhanced wind uplift resistance</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Multi-layer dimensional profile</li>
             </ul>
           </div>
         </div>
 
-        <!-- 2. Standing Seam Metal Card -->
+        <!-- 2. Standing Seam Metal -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="p-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
-            <div class="absolute right-4 bottom-4 text-slate-700/30 text-7xl font-black pointer-events-none">02</div>
-            <div class="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-md mb-6">
-              <i class="fa-solid fa-warehouse"></i>
-            </div>
-            <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-lg border border-amber-400/20">Maximum Longevity</span>
-            <h4 class="text-2xl font-black mt-3">Standing Seam Metal</h4>
+          <div class="h-56 relative overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=compress&cs=tinysrgb&w=800" alt="Modern home with metal roof lines" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+              <i class="fa-solid fa-warehouse text-amber-400 mr-1.5"></i> Metal Systems
+            </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <p class="text-slate-600 text-sm leading-relaxed">Sleek, highly durable metal roofing panels that reflect solar heat and deliver 50+ years of lifetime protection against severe storms.</p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-2 border-t border-slate-100">
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">Standing Seam Metal</h4>
+              <p class="text-slate-600 text-sm leading-relaxed mt-2">Sleek, highly durable metal roofing panels that reflect solar heat and deliver 50+ years of lifetime protection against severe storms.</p>
+            </div>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> 50+ year structural lifespan</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Superior energy efficiency</li>
             </ul>
           </div>
         </div>
 
-        <!-- 3. Impact-Resistant Shingles Card -->
+        <!-- 3. Impact-Resistant Shingles -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-slate-200/80 group hover:shadow-xl transition-all duration-300 flex flex-col">
-          <div class="p-8 bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
-            <div class="absolute right-4 bottom-4 text-slate-700/30 text-7xl font-black pointer-events-none">03</div>
-            <div class="w-14 h-14 bg-amber-600 rounded-2xl flex items-center justify-center text-white text-2xl shadow-md mb-6">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-3 py-1 rounded-lg border border-amber-400/20">Class 4 Rated</span>
-            <h4 class="text-2xl font-black mt-3">Impact-Resistant Shingles</h4>
+          <div class="h-56 relative overflow-hidden bg-slate-900">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=800" alt="Suburban home with high durability roof" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+            <span class="absolute bottom-3 left-3 bg-slate-900/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-white/10">
+              <i class="fa-solid fa-shield-halved text-amber-400 mr-1.5"></i> Class 4 Rated
+            </span>
           </div>
           <div class="p-6 space-y-4 flex-1 flex flex-col justify-between">
-            <p class="text-slate-600 text-sm leading-relaxed">Class 4 impact-rated shingles engineered to withstand heavy hail strikes and qualify many homeowners for insurance premium discounts.</p>
-            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-2 border-t border-slate-100">
+            <div>
+              <h4 class="text-xl font-bold text-slate-900">Impact-Resistant Shingles</h4>
+              <p class="text-slate-600 text-sm leading-relaxed mt-2">Class 4 impact-rated shingles engineered to withstand heavy hail strikes and qualify many homeowners for insurance premium discounts.</p>
+            </div>
+            <ul class="space-y-2 text-xs font-semibold text-slate-700 pt-3 border-t border-slate-100">
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Highest UL 2218 hail rating</li>
               <li><i class="fa-solid fa-check text-amber-600 mr-2"></i> Qualifies for insurance discounts</li>
             </ul>
