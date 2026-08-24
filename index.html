@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Premier Roofing | Residential & Industrial Solutions</title>
+  <title>Premier Roofing | Residential Solutions</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- FontAwesome Icons -->
@@ -16,466 +16,219 @@
 </head>
 <body class="bg-white text-slate-800 antialiased selection:bg-amber-500 selection:text-white">
 
-  <!-- ==================== PROSPECT VIEW SWITCHER BAR ==================== -->
-  <div class="bg-slate-950 text-white py-3 px-4 sticky top-0 z-[100] border-b border-slate-800 shadow-xl">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
-      <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-amber-400">
-        <i class="fa-solid fa-sliders"></i> Toggle Prospect View:
+  <!-- Top Announcement / Trust Bar -->
+  <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> Licensed, Bonded & Insured Contractor</span>
+        <span class="hidden md:inline text-slate-600">|</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-star text-amber-400 mr-1.5"></i> 5-Star Local Rating</span>
       </div>
-      <div class="flex items-center gap-2">
-        <button onclick="switchView('modern')" id="btn-modern" class="view-btn px-5 py-2 rounded-lg text-xs font-bold bg-amber-600 text-white shadow transition">
-          1. Modern (Residential)
-        </button>
-        <button onclick="switchView('industrial')" id="btn-industrial" class="view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition">
-          2. Heavy Industrial & Plant Operations
-        </button>
+      <div class="flex items-center gap-4">
+        <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Birmingham & Surrounding Areas</span>
+        <a href="tel:2055550199" class="font-bold text-white hover:underline"><i class="fa-solid fa-phone text-amber-500 mr-1"></i> (205) 555-0199</a>
       </div>
     </div>
   </div>
 
-
-  <!-- ================================================================= -->
-  <!-- ==================== VIEW 1: MODERN (RESIDENTIAL) ================ -->
-  <!-- ================================================================= -->
-  <div id="view-modern" class="view-panel">
-    
-    <!-- Top Bar -->
-    <div class="bg-slate-900 text-slate-300 text-xs sm:text-sm py-2.5 px-4 border-b border-slate-800">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div class="flex items-center gap-4">
-          <span><i class="fa-solid fa-shield-halved text-amber-500 mr-1.5"></i> Licensed, Bonded & Insured Contractor</span>
-          <span class="hidden md:inline text-slate-600">|</span>
-          <span class="hidden md:inline"><i class="fa-solid fa-star text-amber-400 mr-1.5"></i> 5-Star Local Rating</span>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-11 h-11 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-amber-600/20">
+          <i class="fa-solid fa-house-chimney"></i>
         </div>
-        <div class="flex items-center gap-4">
-          <span><i class="fa-solid fa-location-dot text-amber-500 mr-1"></i> Birmingham & Surrounding Areas</span>
-          <a href="tel:2055550199" class="font-bold text-white hover:underline"><i class="fa-solid fa-phone text-amber-500 mr-1"></i> (205) 555-0199</a>
+        <div>
+          <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none">Premier Roofing</h2>
+          <span class="text-xs text-slate-500 font-semibold tracking-wide uppercase">Residential Division</span>
         </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="tel:2055550199" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200 text-slate-800 hover:bg-slate-50 transition">
+          <i class="fa-solid fa-phone-volume mr-2 text-amber-500"></i> (205) 555-0199
+        </a>
+        <a href="#contact-modern" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-amber-600/20 transition">
+          Free Estimate
+        </a>
       </div>
     </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav class="sticky top-[53px] z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-11 h-11 bg-amber-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-amber-600/20">
-            <i class="fa-solid fa-house-chimney"></i>
-          </div>
-          <div>
-            <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight leading-none">Premier Roofing</h2>
-            <span class="text-xs text-slate-500 font-semibold tracking-wide uppercase">Residential Division</span>
-          </div>
+  <!-- Hero Section with Quote Card -->
+  <header class="relative text-white py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center">
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40 backdrop-blur-[2px]"></div>
+    
+    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold border border-amber-500/40 bg-slate-900/80 text-amber-400 tracking-wide shadow-sm">
+          <i class="fa-solid fa-award"></i> Proudly Serving Alabama Homeowners
         </div>
-        <div class="flex items-center gap-3">
-          <a href="tel:2055550199" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm border border-slate-200 text-slate-800 hover:bg-slate-50 transition">
-            <i class="fa-solid fa-phone-volume mr-2 text-amber-500"></i> (205) 555-0199
-          </a>
-          <a href="#contact-modern" class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-xl font-bold text-sm shadow-lg shadow-amber-600/20 transition">
-            Free Estimate
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-sm leading-tight">
+          Complete Home <br class="hidden sm:block"/>Exterior Services
+        </h1>
+        <p class="text-lg text-slate-200 max-w-xl leading-relaxed">
+          Protect your investment with top-tier materials backed by industry-leading warranties and expert local craftsmanship.
+        </p>
+        <div class="pt-2 flex flex-col sm:flex-row gap-4">
+          <a href="tel:2055550199" class="bg-amber-600 hover:bg-amber-700 text-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold shadow-xl shadow-amber-600/30 text-base transition">
+            <i class="fa-solid fa-phone"></i> Call Now (205) 555-0199
           </a>
         </div>
       </div>
-    </nav>
 
-    <!-- Hero Section with Quote Card -->
-    <header class="relative text-white py-24 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center">
-      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/70 to-slate-950/40 backdrop-blur-[2px]"></div>
-      
-      <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold border border-amber-500/40 bg-slate-900/80 text-amber-400 tracking-wide shadow-sm">
-            <i class="fa-solid fa-award"></i> Proudly Serving Alabama Homeowners
-          </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white drop-shadow-sm leading-tight">
-            Complete Home <br class="hidden sm:block"/>Exterior Services
-          </h1>
-          <p class="text-lg text-slate-200 max-w-xl leading-relaxed">
-            Protect your investment with top-tier materials backed by industry-leading warranties and expert local craftsmanship.
-          </p>
-          <div class="pt-2 flex flex-col sm:flex-row gap-4">
-            <a href="tel:2055550199" class="bg-amber-600 hover:bg-amber-700 text-white inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold shadow-xl shadow-amber-600/30 text-base transition">
-              <i class="fa-solid fa-phone"></i> Call Now (205) 555-0199
-            </a>
-          </div>
-        </div>
-
-        <!-- Fully Upgraded Residential Quote Card -->
-        <div id="contact-modern" class="lg:col-span-5 bg-white text-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-100">
-          <div id="residential-form-container">
-            <h3 class="text-2xl font-black text-slate-900 tracking-tight">Request Free Inspection</h3>
-            <p class="text-sm text-slate-500 mt-1 mb-5">Fast response time & zero-obligation quotes.</p>
-            
-            <form id="residential-quote-form" class="space-y-4" onsubmit="handleResidentialSubmit(event)">
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Full Name</label>
-                <input type="text" id="res-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
-              </div>
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Phone Number</label>
-                <input type="tel" id="res-phone" required placeholder="(205) 555-0199" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
-              </div>
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Email Address</label>
-                <input type="email" id="res-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
-              </div>
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Service Needed</label>
-                <select id="res-service" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
-                  <option>Full Roof Replacement</option>
-                  <option>Roof Repair & Leak Fix</option>
-                  <option>Storm Damage / Insurance Claim</option>
-                  <option>Gutters & Siding</option>
-                </select>
-              </div>
-              <button type="submit" id="res-submit-btn" class="w-full py-4 rounded-xl font-bold text-white bg-amber-600 hover:bg-amber-700 shadow-lg shadow-amber-600/20 transition mt-2 flex items-center justify-center gap-2">
-                <span>Claim Free Inspection</span>
-              </button>
-            </form>
-          </div>
-
-          <!-- Residential Success State -->
-          <div id="residential-form-success" class="hidden text-center py-8 space-y-4">
-            <div class="w-16 h-16 bg-amber-500/20 text-amber-600 rounded-full flex items-center justify-center mx-auto text-3xl border border-amber-500/40">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <h4 class="text-2xl font-black text-slate-900">Inspection Request Confirmed</h4>
-            <p class="text-sm text-slate-600 leading-relaxed">
-              Thank you, <span id="res-display-name" class="font-bold text-amber-600"></span>. Our Birmingham residential project manager will reach out shortly to confirm your inspection time.
-            </p>
-            <button onclick="resetResidentialForm()" class="mt-4 px-6 py-2.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
-              Submit Another Request
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </header>
-
-    <!-- Product Cards Grid -->
-    <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Residential Quote Card / Form -->
+      <div id="contact-modern" class="lg:col-span-5 bg-white text-slate-900 p-8 rounded-3xl shadow-2xl border border-slate-100">
+        <div id="residential-form-container">
+          <h3 class="text-2xl font-black text-slate-900 tracking-tight">Request Free Inspection</h3>
+          <p class="text-sm text-slate-500 mt-1 mb-5">Fast response time & zero-obligation quotes.</p>
           
-          <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Architectural Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            </div>
-            <div class="p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Architectural Dimensional Shingles</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">Multi-layered dimensional shingle profile providing superior wind resistance, deep shadow lines, and rugged long-term protection.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="3-Tab Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            </div>
-            <div class="p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Traditional 3-Tab Asphalt Shingles</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">Clean, uniform shingle design offering reliable weatherproofing, classic roof lines, and cost-effective performance.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
-            <div class="relative overflow-hidden h-64 bg-slate-100">
-              <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Designer Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-            </div>
-            <div class="p-8 flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Impact-Resistant Designer Shingles</h4>
-                <p class="text-slate-600 text-sm leading-relaxed">Class 4 hail-rated heavy-duty shingle texture engineered with specialized polymer modified asphalt for ultimate storm defense.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials Section (Homewood & Mountain Brook) -->
-    <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-50 text-amber-600 border-amber-200">Local Reviews</span>
-          <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Trusted by Homeowners Across Greater Birmingham</h3>
-          <p class="text-slate-600 text-base">Read how our team assisted local families with storm claims, replacements, and premium installations.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <div class="flex items-center gap-1 text-amber-500 text-sm">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-slate-700 italic leading-relaxed">
-              "Premier Roofing handled our complete architectural shingle replacement right here in Homewood. Their crew was prompt, immaculate with cleanup, and guided us seamlessly through our insurance claim process."
-            </p>
+          <form id="residential-quote-form" class="space-y-4" onsubmit="handleResidentialSubmit(event)">
             <div>
-              <div class="font-bold text-slate-900">David & Sarah Miller</div>
-              <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Homewood, AL Homeowners</div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Full Name</label>
+              <input type="text" id="res-name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
             </div>
-          </div>
-
-          <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
-            <div class="flex items-center gap-1 text-amber-500 text-sm">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            </div>
-            <p class="text-slate-700 italic leading-relaxed">
-              "We needed a specialized metal roofing installation for our property in Mountain Brook. Premier Roofing's craftsmanship and attention to detail exceeded our expectations. Truly top-tier local professionals."
-            </p>
             <div>
-              <div class="font-bold text-slate-900">Marcus Vance</div>
-              <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Mountain Brook, AL Homeowner</div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Phone Number</label>
+              <input type="tel" id="res-phone" required placeholder="(205) 555-0199" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Email Address</label>
+              <input type="email" id="res-email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Service Needed</label>
+              <select id="res-service" class="w-full px-4 py-3 rounded-xl border border-slate-200 text-sm bg-slate-50 focus:outline-none focus:ring-2 focus:ring-amber-500">
+                <option>Full Roof Replacement</option>
+                <option>Roof Repair & Leak Fix</option>
+                <option>Storm Damage / Insurance Claim</option>
+                <option>Gutters & Siding</option>
+              </select>
+            </div>
+            <button type="submit" id="res-submit-btn" class="w-full py-4 rounded-xl font-bold text-white bg-amber-600 hover:bg-amber-700 shadow-lg shadow-amber-600/20 transition mt-2 flex items-center justify-center gap-2">
+              <span>Claim Free Inspection</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Success State -->
+        <div id="residential-form-success" class="hidden text-center py-8 space-y-4">
+          <div class="w-16 h-16 bg-amber-500/20 text-amber-600 rounded-full flex items-center justify-center mx-auto text-3xl border border-amber-500/40">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h4 class="text-2xl font-black text-slate-900">Inspection Request Confirmed</h4>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Thank you, <span id="res-display-name" class="font-bold text-amber-600"></span>. Our Birmingham residential project manager will reach out shortly to confirm your inspection time.
+          </p>
+          <button onclick="resetResidentialForm()" class="mt-4 px-6 py-2.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+            Submit Another Request
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Product & Services Grid -->
+  <section class="py-20 bg-slate-50 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-50 text-amber-600 border-amber-200">Roofing Systems</span>
+        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Premium Residential Solutions</h3>
+        <p class="text-slate-600 text-base">Built to withstand Alabama weather with industry-leading manufacturer warranties.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+          <div class="relative overflow-hidden h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="Architectural Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Architectural Dimensional Shingles</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Multi-layered dimensional shingle profile providing superior wind resistance, deep shadow lines, and rugged long-term protection.</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-slate-400 py-12 px-4 text-center border-t border-slate-800">
-      <div class="max-w-7xl mx-auto space-y-3">
-        <h4 class="text-white text-xl font-black">Premier Roofing | Residential Division</h4>
-        <p class="text-sm">Call Us Today: <a href="tel:2055550199" class="text-white font-bold hover:underline">(205) 555-0199</a></p>
-        <p class="text-xs text-slate-600 pt-4">&copy; 2026 Premier Roofing. All rights reserved. Licensed & Insured.</p>
-      </div>
-    </footer>
-  </div>
-
-
-  <!-- ================================================================= -->
-  <!-- ==================== VIEW 2: INDUSTRIAL (HEAVY PLANT) =========== -->
-  <!-- ================================================================= -->
-  <div id="view-industrial" class="view-panel hidden bg-zinc-950 text-zinc-100">
-    
-    <!-- Top Bar -->
-    <div class="bg-zinc-900 text-zinc-400 text-xs sm:text-sm py-2.5 px-4 border-b border-zinc-800">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-        <div class="flex items-center gap-4">
-          <span><i class="fa-solid fa-hard-hat text-yellow-400 mr-1.5"></i> MSHA & OSHA Heavy Plant Certified</span>
-          <span class="hidden md:inline text-zinc-700">|</span>
-          <span class="hidden md:inline"><i class="fa-solid fa-industry text-yellow-400 mr-1.5"></i> Heavy Industrial & Rail-Served Facilities</span>
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+          <div class="relative overflow-hidden h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="3-Tab Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Traditional 3-Tab Asphalt Shingles</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Clean, uniform shingle design offering reliable weatherproofing, classic roof lines, and cost-effective performance.</p>
+            </div>
+          </div>
         </div>
-        <div class="flex items-center gap-4">
-          <span><i class="fa-solid fa-clock text-yellow-400 mr-1"></i> 24/7 Plant Maintenance Dispatch</span>
-          <a href="tel:2055550199" class="font-bold text-white hover:underline"><i class="fa-solid fa-phone text-yellow-400 mr-1"></i> (205) 555-0199</a>
+
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100 group transform transition-all hover:-translate-y-2 hover:shadow-2xl flex flex-col">
+          <div class="relative overflow-hidden h-64 bg-slate-100">
+            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Designer Shingles" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+          </div>
+          <div class="p-8 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-2xl font-bold text-slate-950 tracking-tight mb-3">Impact-Resistant Designer Shingles</h4>
+              <p class="text-slate-600 text-sm leading-relaxed">Class 4 hail-rated heavy-duty shingle texture engineered with specialized polymer modified asphalt for ultimate storm defense.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-white px-4 sm:px-6 lg:px-8 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-amber-50 text-amber-600 border-amber-200">Local Reviews</span>
+        <h3 class="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight">Trusted by Homeowners Across Greater Birmingham</h3>
+        <p class="text-slate-600 text-base">Read how our team assisted local families with storm claims, replacements, and premium installations.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-700 italic leading-relaxed">
+            "Premier Roofing handled our complete architectural shingle replacement right here in Homewood. Their crew was prompt, immaculate with cleanup, and guided us seamlessly through our insurance claim process."
+          </p>
+          <div>
+            <div class="font-bold text-slate-900">David & Sarah Miller</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Homewood, AL Homeowners</div>
+          </div>
+        </div>
+
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm space-y-4">
+          <div class="flex items-center gap-1 text-amber-500 text-sm">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-700 italic leading-relaxed">
+            "We needed a specialized metal roofing installation for our property in Mountain Brook. Premier Roofing's craftsmanship and attention to detail exceeded our expectations. Truly top-tier local professionals."
+          </p>
+          <div>
+            <div class="font-bold text-slate-900">Marcus Vance</div>
+            <div class="text-xs text-slate-500 font-semibold uppercase tracking-wider">Mountain Brook, AL Homeowner</div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Navigation -->
-    <nav class="sticky top-[53px] z-50 bg-zinc-900/95 backdrop-blur-md shadow-lg border-b border-zinc-800">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-          <div class="w-11 h-11 bg-yellow-500 text-zinc-950 rounded-xl flex items-center justify-center font-black text-xl shadow-lg shadow-yellow-500/20">
-            <i class="fa-solid fa-industry"></i>
-          </div>
-          <div>
-            <h2 class="text-lg sm:text-xl font-black text-white tracking-tight leading-none">Premier Industrial</h2>
-            <span class="text-xs text-yellow-400 font-bold tracking-widest uppercase">Heavy Manufacturing & Logistics Division</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="tel:2055550199" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm border border-zinc-700 text-zinc-200 hover:bg-zinc-800 transition">
-            <i class="fa-solid fa-phone-volume mr-2 text-yellow-400"></i> Plant Dispatch
-          </a>
-          <a href="#contact-industrial" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 px-6 py-3 rounded-xl font-extrabold text-sm shadow-lg shadow-yellow-500/20 transition">
-            Request Plant Audit
-          </a>
-        </div>
-      </div>
-    </nav>
+  <!-- Footer -->
+  <footer class="bg-slate-950 text-slate-400 py-12 px-4 text-center border-t border-slate-800">
+    <div class="max-w-7xl mx-auto space-y-3">
+      <h4 class="text-white text-xl font-black">Premier Roofing | Residential Division</h4>
+      <p class="text-sm">Call Us Today: <a href="tel:2055550199" class="text-white font-bold hover:underline">(205) 555-0199</a></p>
+      <p class="text-xs text-slate-600 pt-4">&copy; 2026 Premier Roofing. All rights reserved. Licensed & Insured.</p>
+    </div>
+  </footer>
 
-    <!-- Industrial Hero Section -->
-    <header class="relative text-white py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-[url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=compress&cs=tinysrgb&w=1600')] bg-cover bg-center">
-      <div class="absolute inset-0 bg-zinc-950/90 backdrop-blur-[2px]"></div>
-      <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7 space-y-6">
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold border border-yellow-500/40 bg-zinc-900 text-yellow-400 tracking-wider">
-            <i class="fa-solid fa-shield-halved"></i> Heavy Structural & Mill-Scale Engineering
-          </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-            Heavy Industrial & Plant <span class="text-yellow-400">Roofing Systems</span>
-          </h1>
-          <p class="text-lg text-zinc-300 max-w-xl leading-relaxed">
-            Engineered specifically for heavy manufacturing plants, multi-acre steel mills, rail-served distribution hubs, and bulk material processing facilities across the Southeast. Built to withstand corrosive environments and extreme structural load.
-          </p>
-          <div class="pt-2 flex flex-col sm:flex-row gap-4">
-            <a href="tel:2055550199" class="bg-yellow-500 hover:bg-yellow-400 text-zinc-950 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold shadow-lg shadow-yellow-500/20 text-base transition">
-              <i class="fa-solid fa-phone"></i> Emergency Plant Dispatch (205) 555-0199
-            </a>
-          </div>
-        </div>
-        
-        <!-- Industrial Form -->
-        <div id="contact-industrial" class="lg:col-span-5 bg-zinc-900 text-zinc-100 p-8 rounded-3xl shadow-2xl border border-zinc-800">
-          <div id="form-container">
-            <h3 class="text-2xl font-black text-white tracking-tight">Request Facility Core Audit</h3>
-            <p class="text-sm text-zinc-400 mt-1 mb-5">Destructive core sampling, moisture scans, & mill load calculations.</p>
-            
-            <form id="industrial-audit-form" class="space-y-4" onsubmit="handleIndustrialSubmit(event)">
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-1.5">Plant / Operations Manager</label>
-                <input type="text" id="manager-name" required class="w-full px-4 py-3 rounded-xl border border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-zinc-950 text-white" placeholder="Robert Vance">
-              </div>
-              <div>
-                <label class="block text-xs font-bold uppercase tracking-wider text-yellow-400 mb-1.5">Direct Plant Line / Email</label>
-                <input type="text" id="contact-info" required class="w-full px-4 py-3 rounded-xl border border-zinc-700 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-500 bg-zinc-950 text-white" placeholder="(205) 555-0199 or r.vance@plant.com">
-              </div>
-              <button type="submit" id="submit-btn" class="w-full py-4 rounded-xl font-black text-zinc-950 shadow-lg bg-yellow-500 hover:bg-yellow-400 transition flex items-center justify-center gap-2">
-                <span>Schedule Plant Assessment</span>
-              </button>
-            </form>
-          </div>
-
-          <!-- Industrial Success State -->
-          <div id="form-success" class="hidden text-center py-8 space-y-4">
-            <div class="w-16 h-16 bg-yellow-500/20 text-yellow-400 rounded-full flex items-center justify-center mx-auto text-3xl border border-yellow-500/40">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <h4 class="text-2xl font-black text-white">Audit Request Logged</h4>
-            <p class="text-sm text-zinc-300 leading-relaxed">
-              Thank you, <span id="display-name" class="font-bold text-yellow-400"></span>. Our Lead Industrial Engineer & MSHA Safety Officer will contact your facility direct line within 2 business hours.
-            </p>
-            <button onclick="resetIndustrialForm()" class="mt-4 px-6 py-2.5 rounded-xl text-xs font-bold bg-zinc-800 text-zinc-200 hover:bg-zinc-700 transition">
-              Submit Another Inquiry
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </header>
-
-    <!-- Stats Bar -->
-    <section class="bg-yellow-500 text-zinc-950 py-10 px-4">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-        <div>
-          <div class="text-4xl font-black">25+ Years</div>
-          <div class="text-zinc-900 text-sm font-bold mt-1">Heavy Industrial Contracting</div>
-        </div>
-        <div>
-          <div class="text-4xl font-black">20M+ Sq. Ft.</div>
-          <div class="text-zinc-900 text-sm font-bold mt-1">Mill & Warehouse Roofs Installed</div>
-        </div>
-        <div>
-          <div class="text-4xl font-black">$30M+</div>
-          <div class="text-zinc-900 text-sm font-bold mt-1">Bonding Capacity per Facility</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INDUSTRIAL PROCESS AREA -->
-    <section class="py-20 bg-zinc-950 px-4 sm:px-6 lg:px-8 border-b border-zinc-800">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-yellow-500/10 text-yellow-400 border-yellow-500/30">Facility Audit Methodology</span>
-          <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Our 4-Step Industrial Process</h3>
-          <p class="text-zinc-400 text-base">Rigorous engineering analysis designed for heavy manufacturing plants, mills, and rail terminals with zero disruption to active production schedules.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- Step 1 -->
-          <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 space-y-4 relative group">
-            <div class="text-xs font-black text-yellow-400 tracking-widest uppercase">Step 01</div>
-            <h4 class="text-xl font-bold text-white">Destructive Core Sampling</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Extracting core samples across key roof zones to verify deck condition, insulation depth, and existing membrane adhesion.</p>
-          </div>
-
-          <!-- Step 2 -->
-          <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 space-y-4 relative group">
-            <div class="text-xs font-black text-yellow-400 tracking-widest uppercase">Step 02</div>
-            <h4 class="text-xl font-bold text-white">Thermal & Moisture Scans</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Employing infrared thermography to pinpoint subsurface water infiltration and saturated insulation boards prior to project scope writing.</p>
-          </div>
-
-          <!-- Step 3 -->
-          <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 space-y-4 relative group">
-            <div class="text-xs font-black text-yellow-400 tracking-widest uppercase">Step 03</div>
-            <h4 class="text-xl font-bold text-white">Engineering Load Analysis</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Calculating wind-uplift ratings, dead load tolerances, and specialized chemical resistance requirements for your mill.</p>
-          </div>
-
-          <!-- Step 4 -->
-          <div class="bg-zinc-900 p-8 rounded-2xl border border-zinc-800 space-y-4 relative group">
-            <div class="text-xs font-black text-yellow-400 tracking-widest uppercase">Step 04</div>
-            <h4 class="text-xl font-bold text-white">Zero-Downtime Execution</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Executing complex retrofits around active shift schedules, crane staging, and rigorous MSHA/OSHA safety standards.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Grid Section -->
-    <section class="py-20 bg-zinc-900/50 px-4 sm:px-6 lg:px-8 border-b border-zinc-800">
-      <div class="max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span class="text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full border bg-yellow-500/10 text-yellow-400 border-yellow-500/30">Plant Engineering</span>
-          <h3 class="text-3xl sm:text-4xl font-black text-white tracking-tight">Heavy Industrial & Mill Roofing Systems</h3>
-          <p class="text-zinc-400 text-base">Specialized low-slope, metal retrofit, and high-chemical-resistance membranes engineered for heavy industrial plants.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
-            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
-              <i class="fa-solid fa-industry"></i>
-            </div>
-            <h4 class="text-xl font-bold text-white">Heavy-Duty TPO & EPDM</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Extra-thick chemical and puncture-resistant single-ply membranes designed to withstand heavy soot, exhaust, and industrial foot traffic.</p>
-          </div>
-          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
-            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
-              <i class="fa-solid fa-train"></i>
-            </div>
-            <h4 class="text-xl font-bold text-white">Rail Terminal & Warehouse Metal</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">Concealed fastener structural standing seam metal roof systems built to endure severe vibration from rail spurs and heavy logistics operations.</p>
-          </div>
-          <div class="bg-zinc-900 rounded-2xl p-8 border border-zinc-800 space-y-4">
-            <div class="w-12 h-12 bg-zinc-950 text-yellow-400 rounded-xl flex items-center justify-center text-xl font-bold border border-yellow-500/30">
-              <i class="fa-solid fa-shield-halved"></i>
-            </div>
-            <h4 class="text-xl font-bold text-white">Mill Coating & Corrosion Armor</h4>
-            <p class="text-zinc-400 text-sm leading-relaxed">High-build elastomeric coatings formulated to protect aging steel decks against corrosive plant emissions and acid rain.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-950 text-zinc-400 py-12 px-4 text-center border-t border-zinc-800">
-      <div class="max-w-7xl mx-auto space-y-3">
-        <h4 class="text-white text-xl font-black">Premier Roofing | Heavy Industrial & Plant Division</h4>
-        <p class="text-sm">24/7 Plant Dispatch & Emergency Response: <a href="tel:2055550199" class="text-white font-bold hover:underline">(205) 555-0199</a></p>
-        <p class="text-xs text-zinc-600 pt-4">&copy; 2026 Premier Roofing. All rights reserved. Bonded, Licensed, & MSHA/OSHA Certified.</p>
-      </div>
-    </footer>
-  </div>
-
-
-  <!-- ==================== JAVASCRIPT CONTROLLERS ==================== -->
+  <!-- JavaScript Form Handler -->
   <script>
-    function switchView(viewId) {
-      document.querySelectorAll('.view-panel').forEach(panel => {
-        panel.classList.add('hidden');
-      });
-      document.getElementById('view-' + viewId).classList.remove('hidden');
-
-      const btnModern = document.getElementById('btn-modern');
-      const btnIndustrial = document.getElementById('btn-industrial');
-
-      if (viewId === 'modern') {
-        btnModern.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold bg-amber-600 text-white shadow transition";
-        btnIndustrial.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition";
-      } else {
-        btnModern.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold text-slate-300 hover:bg-slate-800 transition";
-        btnIndustrial.className = "view-btn px-5 py-2 rounded-lg text-xs font-bold bg-yellow-500 text-zinc-950 shadow transition font-black";
-      }
-
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Residential Form Handler
     function handleResidentialSubmit(event) {
       event.preventDefault();
       const submitBtn = document.getElementById('res-submit-btn');
@@ -498,31 +251,6 @@
       submitBtn.innerHTML = `<span>Claim Free Inspection</span>`;
       document.getElementById('residential-form-success').classList.add('hidden');
       document.getElementById('residential-form-container').classList.remove('hidden');
-    }
-
-    // Industrial Form Handler
-    function handleIndustrialSubmit(event) {
-      event.preventDefault();
-      const submitBtn = document.getElementById('submit-btn');
-      const managerName = document.getElementById('manager-name').value;
-      
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Transmitting to Plant Dispatch...`;
-
-      setTimeout(() => {
-        document.getElementById('form-container').classList.add('hidden');
-        document.getElementById('display-name').textContent = managerName;
-        document.getElementById('form-success').classList.remove('hidden');
-      }, 1000);
-    }
-
-    function resetIndustrialForm() {
-      document.getElementById('industrial-audit-form').reset();
-      const submitBtn = document.getElementById('submit-btn');
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = `<span>Schedule Plant Assessment</span>`;
-      document.getElementById('form-success').classList.add('hidden');
-      document.getElementById('form-container').classList.remove('hidden');
     }
   </script>
 
